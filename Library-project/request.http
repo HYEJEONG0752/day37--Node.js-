@@ -12,21 +12,23 @@ Content-Type: application/json
 GET http://localhost:11000/books
 
 ### 특정 도서 조회
-GET http://localhost:11000/books/1729492775357
+GET http://localhost:11000/books/1729496461170
 
 ### 도서 수정
-PUT http://localhost:11000/books/1729492775357
+PUT http://localhost:11000/books/1729496461170
 Content-Type: application/json
 
 {
-    "year": 1998
+    "title": "나니아 연대기",
+    "author": "C.S.루이스",
+    "year": 1950
 }
 
 ### 도서 삭제
-DELETE http://localhost:11000/books/1729492775357
+DELETE http://localhost:11000/books/1729523635260
 
 ### 도서 대출
-GET http://localhost:11000/borrow/1729492775357 ? user=홍길동
+GET http://localhost:11000/borrow/1729496461170 ? user=홍길동
 
 ### 도서 반납
 GET http://localhost:11000/return/1729492775357

@@ -1,0 +1,47 @@
+### 지출 기록 추가
+POST http://localhost:12000/expenses
+Content-Type: application/json
+
+{
+    "amount": 5000,
+    "category": "식비",
+    "date": "2024-04-15",
+    "description": "점심 식사"
+}
+
+### 모든 지출 조회
+GET http://localhost:12000/expenses
+
+### 카테고리별 지출 조회
+GET http://localhost:12000/expenses?category=식비
+
+### 월별 지출 조회
+GET http://localhost:12000/expenses?month=4
+
+### 특정 지출 조회
+GET http://localhost:12000/expenses/0
+
+### 지출 수정
+PUT http://localhost:12000/expenses/0
+Content-Type: application/json
+
+{
+    "amount": 6000
+}
+
+### 지출 삭제
+DELETE http://localhost:12000/expenses/1729523445084
+
+### 카테고리 추가
+POST http://localhost:12000/categories
+Content-Type: application/json
+
+{
+    "category": "교육비"
+}
+
+### 카테고리 삭제
+DELETE http://localhost:12000/categories/교육비
+
+### 월별 통계 조회
+GET http://localhost:12000/statistics?month=4
